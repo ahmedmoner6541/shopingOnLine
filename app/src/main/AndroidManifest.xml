@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.baitbalaby">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.BaitBalaby"
+        tools:replace="android:theme,android:supportsRtl">
+        <activity android:name=".Admin.AdminCheckNewProductsActivity"></activity>
+        <activity android:name=".Admin.AdminHomeActivity" />
+        <activity
+            android:name=".Seller.SallerHomeActivity"
+            android:label="@string/title_activity_saller_home" />
+        <activity android:name=".Seller.SellersRegistritionActivity" />
+        <activity android:name=".Seller.SellerLoginActivity" />
+        <activity android:name=".Buyers.ReserPasswordActivity" />
+        <activity android:name=".Admin.AdminMaintainProductActivity" />
+        <activity android:name=".Buyers.SearchProductActivity" />
+        <activity android:name=".Admin.AdminUserProductsActivity" />
+        <activity android:name=".Admin.AdminNewOrdersActivity" />
+        <activity android:name=".Buyers.ConfirmFinalOrderActivity" />
+        <activity android:name=".Buyers.CartActivity" />
+        <activity android:name=".Buyers.ProductDetailsActivity" />
+        <activity android:name=".Buyers.SettinsActivity" />
+        <activity
+            android:name=".Buyers.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.BaitBalaby.NoActionBar" />
+        <activity android:name=".Seller.SellerProductCategoryActivity" />
+        <activity android:name=".Seller.SellerAddNewProductActivity" />
+        <activity android:name=".Buyers.RegisterActivity" />
+        <activity android:name=".Buyers.LoginActivity" />
+        <activity android:name=".Buyers.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>
