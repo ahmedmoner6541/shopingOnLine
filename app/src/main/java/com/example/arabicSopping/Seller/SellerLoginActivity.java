@@ -1,4 +1,4 @@
-package com.example.baitbalaby.Seller;
+package com.example.arabicSopping.Seller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,8 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.baitbalaby.Buyers.MainActivity;
-import com.example.baitbalaby.R;
+import com.example.arabicSopping.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -53,7 +52,7 @@ public class SellerLoginActivity extends AppCompatActivity {
 
         if (!email.equals("") && !password.equals("")) {
 
-            loadingBar.setTitle(" seller Account login");
+            loadingBar.setTitle("تسجيل الدخول إلى حساب البائع");
             loadingBar.setMessage("Please wait, while we are checking the credentials.");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
@@ -75,7 +74,7 @@ public class SellerLoginActivity extends AppCompatActivity {
 
 
         }else {
-            Toast.makeText(this, "complete login form", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "استمارة تسجيل الدخول كاملة", Toast.LENGTH_SHORT).show();
         }
 
     }

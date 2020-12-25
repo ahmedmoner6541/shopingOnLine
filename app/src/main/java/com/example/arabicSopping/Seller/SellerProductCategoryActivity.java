@@ -1,16 +1,13 @@
-package com.example.baitbalaby.Seller;
+package com.example.arabicSopping.Seller;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.Button;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.baitbalaby.Buyers.HomeActivity;
-import com.example.baitbalaby.Buyers.MainActivity;
-import com.example.baitbalaby.R;
-import com.example.baitbalaby.Seller.SellerAddNewProductActivity;
+import com.example.arabicSopping.R;
 
 public class SellerProductCategoryActivity extends AppCompatActivity {
 

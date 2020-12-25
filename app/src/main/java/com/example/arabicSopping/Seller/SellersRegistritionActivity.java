@@ -1,4 +1,4 @@
-package com.example.baitbalaby.Seller;
+package com.example.arabicSopping.Seller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-import com.example.baitbalaby.Buyers.MainActivity;
-import com.example.baitbalaby.R;
+import com.example.arabicSopping.Buyers.MainActivity;
+import com.example.arabicSopping.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -85,8 +85,8 @@ String ex ;
 
         if (!name.equals("") && !phone.equals("") && !email.equals("") && !password.equals("") && !address.equals("") ){
 
-            loadingBar.setTitle("Creating seller Account");
-            loadingBar.setMessage("Please wait, while we are checking the credentials.");
+            loadingBar.setTitle("إنشاء حساب بائع ");
+            loadingBar.setMessage("\"يُرجى الانتظار ، بينما نتحقق من بيانات الاعتماد.");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -111,7 +111,7 @@ String ex ;
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         loadingBar.dismiss();
-                                        Toast.makeText(SellersRegistritionActivity.this, "onComplete", Toast.LENGTH_SHORT).show();
+              //   Toast.makeText(SellersRegistritionActivity.this, "onComplete", Toast.LENGTH_SHORT).show();
 
                                         Intent intent = new Intent(SellersRegistritionActivity.this, MainActivity.class);
                                         intent.addFlags( Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -124,7 +124,7 @@ String ex ;
             });
 
               }else {
-            Toast.makeText(this, "complete register form", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "استمارة التسجيل كاملة ", Toast.LENGTH_SHORT).show();
         }
             }
          }

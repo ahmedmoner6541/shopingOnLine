@@ -1,4 +1,4 @@
-package com.example.baitbalaby.Seller;
+package com.example.arabicSopping.Seller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +15,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
-import com.example.baitbalaby.Seller.SellerProductCategoryActivity;
-import com.example.baitbalaby.R;
+import com.example.arabicSopping.R;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -148,19 +147,19 @@ public class SellerAddNewProductActivity extends AppCompatActivity
 
         if (ImageUri == null)
         {
-            Toast.makeText(this, "Product image is mandatory...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ادخل الصوره ", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(Description))
         {
-            Toast.makeText(this, "Please write product description...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ادخل الوصف ", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(Price))
         {
-            Toast.makeText(this, "Please write product Price...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ادخل السعر", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(Pname))
         {
-            Toast.makeText(this, "Please write product name...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ادخل الاسم ", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -205,7 +204,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
             {
-                Toast.makeText(SellerAddNewProductActivity.this, "Product Image uploaded Successfully...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SellerAddNewProductActivity.this, " تم تحميل الصوره", Toast.LENGTH_SHORT).show();
 
                 Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                     @Override
@@ -227,7 +226,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity
                         {
                             downloadImageUrl = task.getResult().toString();
 
-                            Toast.makeText(SellerAddNewProductActivity.this, "got the Product image Url Successfully...", Toast.LENGTH_SHORT).show();
+//Toast.makeText(SellerAddNewProductActivity.this, "got the Product image Url Successfully...", Toast.LENGTH_SHORT).show();
 
                             SaveProductInfoToDatabase();
                         }
@@ -270,7 +269,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity
                             startActivity(intent);
 
                             loadingBar.dismiss();
-                            Toast.makeText(SellerAddNewProductActivity.this, "Product is added successfully..", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SellerAddNewProductActivity.this, "تم اضافة المنتج بنجاح .", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {

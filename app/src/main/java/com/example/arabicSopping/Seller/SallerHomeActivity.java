@@ -1,4 +1,4 @@
-package com.example.baitbalaby.Seller;
+package com.example.arabicSopping.Seller;
 
 
 
@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,15 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.example.baitbalaby.Admin.AdminCheckNewProductsActivity;
-import com.example.baitbalaby.Seller.SellerProductCategoryActivity;
-import com.example.baitbalaby.Buyers.MainActivity;
-import com.example.baitbalaby.R;
+import com.example.arabicSopping.Buyers.MainActivity;
+import com.example.arabicSopping.R;
 
 
-import com.example.baitbalaby.ViewHolder.ItemViewHolder;
-import com.example.baitbalaby.ViewHolder.ProductViewHolder;
-import com.example.baitbalaby.model.Products;
+import com.example.arabicSopping.ViewHolder.ItemViewHolder;
+import com.example.arabicSopping.model.Products;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -75,7 +71,7 @@ public class SallerHomeActivity extends AppCompatActivity {
 
 
                     case R.id.navigation_logout:
-                        Toast.makeText(SallerHomeActivity.this, "logouted", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SallerHomeActivity.this, "تسجيل الخروج", Toast.LENGTH_SHORT).show();
 
                         FirebaseAuth mAuth;
                         mAuth = FirebaseAuth.getInstance();
@@ -121,8 +117,8 @@ public class SallerHomeActivity extends AppCompatActivity {
                 holder.txtProductDescriptionseller.setText(model.getDescription());
 
 
-                holder.textproductstatusseller.setText("state :"+model.getProductstate());
-                holder.txtProductPriceseller.setText("Price = " + model.getPrice() + "$");
+                holder.textproductstatusseller.setText("الحاله :"+model.getProductstate());
+                holder.txtProductPriceseller.setText("السعر = " + model.getPrice() + "$");
 
                 Picasso.get().load(model.getImage()).into(holder.imageView);
 
@@ -133,11 +129,11 @@ public class SallerHomeActivity extends AppCompatActivity {
                         final String producID = model.getPid();
                         CharSequence options [] = new CharSequence[]
                                 {
-                                        "yes"
-                                        ,"no"
+                                        "نعم "
+                                        ,"لا"
                                 };
                         AlertDialog.Builder builder = new AlertDialog.Builder(SallerHomeActivity.this);
-                        builder.setTitle("Do you wamt to delet this product . Are you Sure?");
+                        builder.setTitle("هل تريد حذف هذا المنتج. هل أنت واثق؟");
                         builder.setItems(options, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -175,7 +171,7 @@ public class SallerHomeActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(SallerHomeActivity.this, "this item has been delet successfully , and it is now available for sale from the seller . ", Toast.LENGTH_SHORT).show();
+  Toast.makeText(SallerHomeActivity.this, "تم حذف هذا العنصر بنجاح ، وهو الآن متاح للبيع من البائع\n" , Toast.LENGTH_SHORT).show();
                     }
                 });
 
